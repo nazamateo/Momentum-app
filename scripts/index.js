@@ -113,6 +113,11 @@ document.querySelector("#crossedout").classList.toggle("hide")
 var movedown = document.getElementById("usersfocus")
 movedown.style.top = "70%"
 
+var todaysfocusinput = document.getElementById("focusinput").value
+console.log(todaysfocusinput)
+
+document.getElementById("crossedout").textContent = todaysfocusinput
+
 }
 
 
