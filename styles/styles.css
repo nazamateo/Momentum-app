@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Maitree:wght@500&display=swap");
+.homepage {
+  width: 100vw;
+  height: 100vh;
+}
+.homepage .gsearch {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 15vw;
+  height: 10vh;
+}
+.homepage .weather {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 15vw;
+  height: 10vh;
+}
+.homepage .blank {
+  position: absolute;
+  top: 10%;
+  width: 100vw;
+  height: 20vh;
+}
+.homepage .time {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 30%;
+  width: 100vw;
+  height: 25vh;
+  font-size: 10vh;
+}
+.homepage .time #clock {
+  font-size: 20vh;
+}
+.homepage .time .dropcontain {
+  display: flex;
+  align-items: center;
+}
+.homepage .time .dropcontain #toggletime {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50%;
+}
+.homepage .time .dropcontain #timedropdown {
+  display: none;
+}
+.homepage .time .dropcontain #timedropdown.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  align-content: center;
+  bottom: 6vh;
+}
+.homepage .time .dropcontain #timedropdown.show a {
+  font-size: 2vh;
+  margin: auto;
+  text-align: center;
+  padding: 0.5vw;
+}
+.homepage .mantra {
+  position: absolute;
+  top: 55%;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage .mantra h1 {
+  font-size: 7vh;
+}
+.homepage .focus {
+  position: absolute;
+  top: 70%;
+  width: 100vw;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage .focus #focushide #h3hide {
+  font-size: 5vh;
+}
+.homepage .focus #focushide #focusform .focusinput {
+  font-size: 5vh;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid snow;
+}
+.homepage .focus #focushide #focusform .focusinput:focus {
+  outline: none;
+  transform: scale(1.1);
+  color: snow;
+}
+.homepage .focus #focushide .hide {
+  display: none;
+}
+.homepage .focus #focushide .hide #h3hide .hide {
+  display: none;
+}
+.homepage .focus #focushide .hide #focusform .hide {
+  display: none;
+}
+.homepage .focus #focushide .hide #focusform .hide #focusinput .hide {
+  display: none;
+}
+.homepage #usersfocus .hide {
+  display: none;
+}
+.homepage #usersfocus .hide #h3show .hide {
+  display: none;
+}
+.homepage #usersfocus .hide #focusshow .hide {
+  display: none;
+}
+.homepage #usersfocus .hide #focusshow .hide #todaysfocus .hide {
+  display: none;
+}
+.homepage #usersfocus .hide #focusshow .hide input[type=checkbox]:checked + #crossedout.hide {
+  display: none;
+}
+.homepage #usersfocus {
+  position: absolute;
+  top: 10%;
+  width: 100vw;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage #usersfocus #h3show {
+  font-size: 4vh;
+}
+.homepage #usersfocus #focusshow #crossedout {
+  font-size: 5vh;
+}
+.homepage #usersfocus #focusshow input[type=checkbox]:checked + #crossedout {
+  font-size: 4vh;
+  text-decoration: line-through;
+}
+.homepage .quotes {
+  position: absolute;
+  bottom: 1%;
+  left: 15%;
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .quotes #usersquotes {
+  font-style: italic;
+  width: auto;
+  height: auto;
+  font-size: 2.5vh;
+  color: snow;
+}
+.homepage .quotes .adduserquotescontain {
+  align-items: center;
+  display: flex;
+}
+.homepage .quotes .adduserquotescontain #addquotes {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+}
+.homepage .quotes .adduserquotescontain #quotesform {
+  display: none;
+}
+.homepage .quotes .adduserquotescontain #quotesform.show {
+  display: flex;
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  align-content: center;
+  bottom: 6vh;
+}
+.homepage .quotes .adduserquotescontain #quotesform.show .quotesinput {
+  font-size: 2vh;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid snow;
+}
+.homepage .quotes .adduserquotescontain #quotesform.show .quotesinput:focus {
+  outline: none;
+  transform: scale(1.1);
+  color: snow;
+}
+.homepage .quotes .adduserquotescontain #quotesform.show h1 {
+  font-size: 2vh;
+  margin: auto;
+  text-align: center;
+  padding: 0.5vw;
+}
+.homepage .todo {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 15vw;
+  height: 10vh;
+}
+
+.login {
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .form {
+  display: block;
+  position: relative;
+  top: 35%;
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  vertical-align: center;
+}
+.login .form .question {
+  font-size: 8vh;
+}
+.login .form .name {
+  font-size: 5vh;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid snow;
+  color: snow;
+}
+.login .form .name:focus {
+  outline: none;
+  transform: scale(1.1);
+  color: snow;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  background-image: url(/images/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  display: block;
+  scroll-behavior: smooth;
+  font-family: "Maitree", serif;
+  color: snow;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font: "Maitree", serif;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*# sourceMappingURL=styles.css.map */

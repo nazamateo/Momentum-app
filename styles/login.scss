@@ -1,0 +1,42 @@
+.login {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        display: block;
+        position: relative;
+        top: 35%;
+        width: 50vw;
+        height: 100vh;
+        text-align: center;
+        vertical-align: center;
+
+        .img {}
+
+        .question {
+            font-size: 8vh;
+        }
+
+        .name {
+            font-size: 5vh;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid snow;
+            color: snow;
+        }
+
+        .name:focus {
+            outline: none;
+            transform: scale(1.1);
+            color: snow;
+        }
+
+
+
+    }
+}
