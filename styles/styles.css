@@ -224,6 +224,7 @@
   right: 1%;
   width: 15vw;
   height: 10vh;
+  overflow: hidden;
 }
 
 .login {
@@ -278,7 +279,7 @@
   3. Allow percentage-based heights in the application
 */
 html, body {
-  background-image: url(/images/2.jpg);
+  background-image: url(/images/03631_trion_1920x1080.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -287,6 +288,7 @@ html, body {
   scroll-behavior: smooth;
   font-family: "Maitree", serif;
   color: snow;
+  overflow: hidden;
 }
 
 /*
