@@ -1,4 +1,5 @@
-
+var vid = document.getElementById("myVideo");
+vid.playbackRate = 0.7;
 
 //quotes
 var quotes = ['"The bad news is time flies. The good news is you’re the pilot."',
@@ -55,6 +56,8 @@ function addNewq() {
     document.querySelector("#quotesinput").value = ""
     console.log('quotes.length ' + quotes.length)
     console.log(quotes)
+    var quotations = document.getElementById("usersquotes")
+    quotations.textContent = newQuote
   }
   return false
 }
@@ -80,7 +83,7 @@ function greeting() {
     //Good evening, 
     usergreeting.textContent = 'Good afternoon, '
 
-    if (hournow>18){
+    if (hournow > 18) {
       usergreeting.textContent = 'Good evening, '
     }
   } else {
@@ -96,29 +99,110 @@ greeting()
 const userfocusbutton = document.getElementById("focusbutton")
 userfocusbutton.onclick = function () {
   addNewfocus()
-console.log("success")
+  console.log("success")
 }
 
-function addNewfocus(){
-document.querySelector("#focushide").classList.toggle("hide")
-document.querySelector("#h3hide").classList.toggle("hide")
-document.querySelector("#focusform").classList.toggle("hide")
+function addNewfocus() {
+  document.querySelector("#focushide").classList.toggle("hide")
+  document.querySelector("#h3hide").classList.toggle("hide")
+  document.querySelector("#focusform").classList.toggle("hide")
 
-document.querySelector("#usersfocus").classList.toggle("hide")
-document.querySelector("#h3show").classList.toggle("hide")
-document.querySelector("#focusshow").classList.toggle("hide")
-document.querySelector("#todaysfocus").classList.toggle("hide")
-document.querySelector("#crossedout").classList.toggle("hide")
+  document.querySelector("#usersfocus").classList.toggle("hide")
+  document.querySelector("#h3show").classList.toggle("hide")
+  document.querySelector("#focusshow").classList.toggle("hide")
+  document.querySelector("#todaysfocus").classList.toggle("hide")
+  document.querySelector("#crossedout").classList.toggle("hide")
 
-var movedown = document.getElementById("usersfocus")
-movedown.style.top = "70%"
+  var todaysfocusinput = document.getElementById("focusinput").value
+  console.log(todaysfocusinput)
+  document.getElementById("crossedout").textContent = todaysfocusinput
 
-var todaysfocusinput = document.getElementById("focusinput").value
-console.log(todaysfocusinput)
+  var movedown = document.getElementById("usersfocus")
 
-document.getElementById("crossedout").textContent = todaysfocusinput
+  if (movedown.style.top !== "70%") {
+    movedown.style.top = "70%"
+  } else {
+    movedown.style.top = "10%"
+    alert("GOOD JOB!")
+  }
+
 
 }
+
+//todo list
+var todolistarray = []
+
+
+//show todo input form
+var addtodobutton = document.getElementById('addtodo')
+addtodobutton.onclick = function () {
+  addNewtodo()
+}
+
+function addNewtodo() {
+  console.log(addtodobutton)
+  document.querySelector("#todoform").classList.toggle("show")
+  console.log(document.querySelector("#todoform"))
+}
+
+//add inputted todo to array
+let todobutton = document.querySelector("#todobutton")
+function addtodotolist() {
+  let usertodoinput = document.querySelector("#todoinput").value
+  todolistarray.push(usertodoinput)
+  document.querySelector("#todoinput").value = ""
+  console.log(document.querySelector("#todoinput").value)
+  console.log(todolistarray)
+
+
+  var newli = document.createElement("li")
+  var newpi = document.createElement("p")
+
+  newpi.innerHTML= todolistarray[(todolistarray.length-1)]
+  newpi.setAttribute("class", "todododododo")
+  newli.appendChild(newpi)
+
+  
+  var checkbox = document.createElement('input')
+  checkbox.type = "checkbox"
+  newli.prepend(checkbox);
+  
+
+
+
+  var remove = document.createElement('p')
+  remove.innerHTML = `<i class="large material-icons">remove_circle_outline</i>`
+  remove.setAttribute("class", "icon")
+  console.log(remove)
+  newli.prepend(remove)
+
+
+    console.log(newli)
+    var thelist = document.querySelector("#userstodo")
+    thelist.append(newli)
+    console.log(thelist)
+  return false
+}
+
+//show add todo list
+function showtodolist(){
+
+  for (i=0; i<todolistarray.length; i++)
+  {
+    var newli = document.createElement("li")
+    newli.innerHTML = todolistarray[i]
+    console.log(newli)
+    var thelist = document.querySelector("#userstodo")
+    thelist.appendChild(newli)
+    console.log(thelist)
+  }
+}
+
+
+
+
+
+
 
 
 //clock
@@ -206,4 +290,3 @@ function timeOptions() {
   document.querySelector("#timedropdown").classList.toggle("show")
   console.log(document.querySelector("#timedropdown"))
 }
-

@@ -13,17 +13,109 @@
 </head>
 
 <body>
+    <!--
     <section class="login">
 
 
-<form class="form" action="/index.html"  target="" method="get">
-    <img src="">
+<form class="form">
+    <img src=""><br>
     <h1 class="question">Hello, what's your name?</h1>
-    <input type="text" id="name" class="name" name="name" size="30" placeholder="" required>
-    <button type="submit" id="usersnamebutton"></button>
+    <input type="text" id="name" class="name" name="name" size="20" placeholder="Name" required><br>
 </form>
 
-</section>
+    </section>-->
+
+    <section class="homepage">
+        <video autoplay muted loop id="myVideo">
+            <source src="/videos/production ID_4478322.mp4" type="video/mp4">
+        </video>
+
+
+
+        <div class="gsearch"></div>
+
+
+
+        <div class="blank"></div>
+
+        <div class="time">
+            <div id="clock"></div>
+            <div class="dropcontain">
+                <i class="large material-icons" id="toggletime">access_time</i>
+                <div id="timedropdown">
+                    <a><button class="timeoptions" onclick="clock.switchTo12HourFormat()">12HR</button></a>
+                    <a><button class="timeoptions" onclick="clock.switchTo24HourFormat()">24HR</button></a></div>
+            </div>
+        </div>
+
+        <div class="mantra">
+            <h1><span id="displaygreeting"></span><span id="displayname">i am null</span><span>.</span></h1>
+        </div>
+
+        <div class="focus">
+            <div id="focushide">
+                <h3 id="h3hide">What is your main forcus for today?</h3>
+                <form id="focusform" target="" method="" onsubmit="return false">
+                    <input type="text" id="focusinput" class="focusinput" name="focusinput" size="30" required>
+                    <button type="button" id="focusbutton" onclick="addNewfocus()"></button>
+                </form>
+            </div>
+        </div>
+
+
+        <div id="usersfocus" class="hide">
+            <h3 id="h3show" class="hide">TODAY</h3>
+            <form id="focusshow" class="hide" target="" method="" onsubmit="return false">
+                <input type="checkbox" name="todaysfocus" id="todaysfocus" class="hide" value="1" />
+                <label for="todaysfocus" id="crossedout" class="hide">i am null</label>
+                <button type="button" id="focusbutton" onclick="addNewfocus()"></button>
+            </form>
+        </div>
+
+
+
+        <div class="quotes">
+            <p id="usersquotes"></p>
+            <div class="adduserquotescontain">
+                <i class="large material-icons" id="addquotes">add_circle</i>
+                <div id="quotesform">
+                    <form target="" method="" onsubmit="return false">
+                        <h1>Add more inspiring quotes.</h1>
+                        <input type="text" id="quotesinput" class="quotesinput" name="quotesinput" size="50" required>
+                        <button type="button" id="quotesbutton" onclick="addNewq()"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="todo">
+                <ul id="userstodo">
+                </ul>
+            <div class="addusertodocontain">
+                <p><i class="large material-icons" id="addtodo">assignment</i>ToDo</p>
+                <div id="todoform">
+                    <form target="" method="" onsubmit="return false">
+                        <h1>New ToDo.</h1>
+                        <input type="text" id="todoinput" class="todoinput" name="todoinput" size="20" required>
+                        <button type="button" id="todobutton" onclick="addtodotolist()"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="sounds">
+            <p><i class="large material-icons" id="music">library_music</i>Music</p>
+            <div id="hide">
+                <iframe
+                    src="https://open.spotify.com/embed/track/6wZI4mdT8JwXgkGURnBQiq?utm_source=generator" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+
+    </section>
 
     <script src="/scripts/index.js" async defer></script>
 </body>

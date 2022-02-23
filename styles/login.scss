@@ -1,3 +1,15 @@
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+
+
+
 .login {
     margin: auto;
     width: 100vw;
@@ -13,7 +25,6 @@
         width: 50vw;
         height: 100vh;
         text-align: center;
-        vertical-align: center;
 
         .img {}
 

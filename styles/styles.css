@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Maitree:wght@500&display=swap");
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .homepage {
   width: 100vw;
   height: 100vh;
@@ -7,13 +16,6 @@
   position: absolute;
   top: 1%;
   left: 1%;
-  width: 15vw;
-  height: 10vh;
-}
-.homepage .weather {
-  position: absolute;
-  top: 1%;
-  right: 1%;
   width: 15vw;
   height: 10vh;
 }
@@ -147,13 +149,13 @@
   justify-content: center;
 }
 .homepage #usersfocus #h3show {
-  font-size: 4vh;
+  font-size: 2.5vh;
 }
 .homepage #usersfocus #focusshow #crossedout {
-  font-size: 5vh;
+  font-size: 3vh;
 }
 .homepage #usersfocus #focusshow input[type=checkbox]:checked + #crossedout {
-  font-size: 4vh;
+  font-size: 3vh;
   text-decoration: line-through;
 }
 .homepage .quotes {
@@ -164,7 +166,7 @@
   height: 10vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 .homepage .quotes #usersquotes {
   font-style: italic;
@@ -172,6 +174,8 @@
   height: auto;
   font-size: 2.5vh;
   color: snow;
+  display: inline-block;
+  align-self: flex-end;
 }
 .homepage .quotes .adduserquotescontain {
   align-items: center;
@@ -183,9 +187,9 @@
   border-radius: 50%;
   padding: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  font-size: 150%;
+  font-size: 130%;
 }
 .homepage .quotes .adduserquotescontain #quotesform {
   display: none;
@@ -199,6 +203,7 @@
   border-radius: 8px;
   align-content: center;
   bottom: 6vh;
+  left: 38vw;
 }
 .homepage .quotes .adduserquotescontain #quotesform.show .quotesinput {
   font-size: 2vh;
@@ -218,13 +223,39 @@
   text-align: center;
   padding: 0.5vw;
 }
-.homepage .todo {
+.homepage #sounds {
   position: absolute;
   bottom: 1%;
-  right: 1%;
+  left: 1%;
   width: 15vw;
   height: 10vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.homepage #sounds p {
+  opacity: 0.5;
+}
+.homepage #sounds #hide {
+  display: none;
+}
+.homepage #sounds:hover #hide {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  width: 15vw;
+  height: 10vh;
+  display: block;
+  z-index: 2;
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .login {
@@ -242,7 +273,6 @@
   width: 50vw;
   height: 100vh;
   text-align: center;
-  vertical-align: center;
 }
 .login .form .question {
   font-size: 8vh;
@@ -329,6 +359,87 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+.todo {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 15vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.todo #userstodo {
+  width: 15vw;
+  height: auto;
+  background-color: rgba(225, 225, 225, 0.5);
+  border-radius: 8px;
+  list-style: none;
+  position: fixed;
+  bottom: 15%;
+  left: 84%;
+  font-style: italic;
+  font-size: 2vh;
+  color: snow;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
+.todo #userstodo li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1vw;
+}
+.todo #userstodo li .todododododo {
+  width: 5vw;
+  overflow-wrap: break-word;
+}
+.todo #userstodo li input[type=checkbox]:checked + p {
+  text-decoration: line-through;
+}
+.todo .addusertodocontain {
+  justify-content: center;
+  display: flex;
+}
+.todo .addusertodocontain p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  opacity: 0.5;
+}
+.todo .addusertodocontain #todoform {
+  display: none;
+}
+.todo .addusertodocontain #todoform.show {
+  display: flex;
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  align-content: center;
+  bottom: 6vh;
+  left: 0vw;
+}
+.todo .addusertodocontain #todoform.show .todoinput {
+  font-size: 2vh;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid snow;
+}
+.todo .addusertodocontain #todoform.show .todoinput:focus {
+  outline: none;
+  transform: scale(1.1);
+  color: snow;
+}
+.todo .addusertodocontain #todoform.show h1 {
+  font-size: 2vh;
+  margin: auto;
+  text-align: center;
+  padding: 0.5vw;
 }
 
 /*# sourceMappingURL=styles.css.map */
