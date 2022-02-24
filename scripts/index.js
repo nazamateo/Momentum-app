@@ -154,28 +154,27 @@ function addtodotolist() {
   console.log(document.querySelector("#todoinput").value)
   console.log(todolistarray)
 
-
   var newli = document.createElement("li")
+  newli.setAttribute("id",usertodoinput);
   var newpi = document.createElement("p")
 
   newpi.innerHTML= todolistarray[(todolistarray.length-1)]
   newpi.setAttribute("class", "todododododo")
   newli.appendChild(newpi)
 
-  
   var checkbox = document.createElement('input')
   checkbox.type = "checkbox"
   newli.prepend(checkbox);
   
-
-
 
   var remove = document.createElement('p')
   remove.innerHTML = `<i class="large material-icons">remove_circle_outline</i>`
   remove.setAttribute("class", "icon")
   console.log(remove)
   newli.prepend(remove)
-
+  remove.onclick = function() {
+    this.parentElement.style.display = "none";
+  }
 
     console.log(newli)
     var thelist = document.querySelector("#userstodo")
@@ -184,19 +183,17 @@ function addtodotolist() {
   return false
 }
 
-//show add todo list
-function showtodolist(){
+//delete todolist
 
-  for (i=0; i<todolistarray.length; i++)
-  {
-    var newli = document.createElement("li")
-    newli.innerHTML = todolistarray[i]
-    console.log(newli)
-    var thelist = document.querySelector("#userstodo")
-    thelist.appendChild(newli)
-    console.log(thelist)
-  }
-}
+
+
+
+
+
+
+
+
+
 
 
 
